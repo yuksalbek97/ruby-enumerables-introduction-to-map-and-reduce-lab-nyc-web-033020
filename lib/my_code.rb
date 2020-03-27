@@ -1,9 +1,11 @@
 # My Code here...
 nums = [1, 2, 3, -9]
+def map_to_negativize (nums)
 final_array = []
   counter = 0 
   while counter < nums.size do
    final_array.push(nums[counter] * -1)
+   counter += 1
   end
 final_array
 end
@@ -13,6 +15,7 @@ end
   counter = 0 
   while counter < dune.size do
    final_array.push(dune[counter])
+   counter += 1
   end
 final_array
 end
@@ -22,15 +25,17 @@ end
   counter = 0 
   while counter < nums.size do
    final_array.push(nums[counter] * 2)
+    counter += 1
   end
 final_array
 end
 
-  def map_to_double(nums)
+  def map_to_square(nums)
   final_array = []
   counter = 0 
   while counter < nums.size do
    final_array.push(nums[counter] ** 2)
+    counter += 1
   end
 final_array
 end
@@ -48,38 +53,27 @@ end
 def reduce_to_all_true(source_array)
 counter = 0 
 while counter < source_array.size do
-return false if source_array[counter] == false
+ return false if !source_array[counter] 
+ counter += 1
+
 end
 return true
 end
-end
 
-def reduce_to_all_true(source_array)
-counter = 0 
-while counter < source_array.size do
-return true if source_array[counter] == true
-end
-return false
-end
-end
 
-def reduce_to_any_true(source_array)
-counter = 0 
-while counter < source_array.size do
-return true if source_array[counter] == true
-end
-return false
-end
-end
+
 
 
 def reduce_to_any_true(source_array)
 counter = 0 
 while counter < source_array.size do
-return false if source_array[counter] == false
+ if source_array[counter] == true
+   return true
 end
-return true
+ counter += 1
+
 end
+return false
 end
 
 
