@@ -71,8 +71,9 @@ while counter < source_array.size do
    return true
 end
  counter += 1
-return false
+
 end
+return false
 end
 
 
